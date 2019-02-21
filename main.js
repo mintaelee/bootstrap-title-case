@@ -20,19 +20,24 @@ function handleTyping(event) {
         i++;
     };
 
-    document.querySelector('.changeme').innerText = answer;
+    document.querySelector('.title-case').innerText = answer;
 }
 
 function handleSecondTyping(event) {
     let userInput = event.target.value.toLowerCase();
     let answer = '';
+    let counter = 0;
     for (i = 0; i < userInput.length; i++){
-        if (i % 2 === 0 && userInput[i] !== ' '){
+        if (counter % 2 === 0 && userInput[i] !== ' '){
             answer += userInput.charAt(i).toUpperCase();
+            counter++;
+        } else if (userInput[i] === ' ') {
+            answer += userInput[i];
         } else {
             answer += userInput[i];
+            counter++;
         }
     }
 
-    document.querySelector('.changeme2').innerText = answer;
+    document.querySelector('.alternating-capital').innerText = answer;
 }
