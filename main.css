@@ -31,6 +31,23 @@
     height: 50px;
 }
 
+.reverse-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+    font-size: 1.5em;
+    height: 50px;
+}
+
+.emoji-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    height: 50px;
+}
+
 input{
     background-color: indianred;
     color: white;
