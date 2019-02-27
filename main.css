@@ -31,7 +31,7 @@
     height: 50px;
 }
 
-.reverse-input {
+.reverse-output {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,7 +40,7 @@
     height: 50px;
 }
 
-.emoji-input {
+.emoji-output {
     display: flex;
     justify-content: center;
     align-items: center;

@@ -2,19 +2,19 @@ window.onload = init;
 
 function init() {
     document.querySelector('.input')
-        .addEventListener('keyup', handleTyping);
+        .addEventListener('keyup', handleTitleCase);
     document.querySelector('.input2')
-        .addEventListener('keyup', handleSecondTyping);
-    document.querySelector('.input3').addEventListener('keyup', handleThirdTyping);
-    document.querySelector('.input4').addEventListener('keyup', handleFourthTyping);
+        .addEventListener('keyup', handleAlternatingCaptial);
+    document.querySelector('.input3').addEventListener('keyup', handleReverseInput);
+    document.querySelector('.input4').addEventListener('keyup', handleEmojiInput);
 }
 
-function handleTyping(event) {
+function handleTitleCase(event) {
     // Convert input to all lower case
     let userInput = event.target.value.toLowerCase();
     // Construct an empty string to concantenate
     let answer = '';
-    i = 0;
+    let i = 0;
 
     // Loop through each character
     while (i < userInput.length) {
@@ -32,7 +32,7 @@ function handleTyping(event) {
     document.querySelector('.title-case').innerText = answer;
 }
 
-function handleSecondTyping(event) {
+function handleAlternatingCaptial(event) {
     // Convert input to lowercase
     let userInput = event.target.value.toLowerCase();
     // Construct an empty string to concantenate
@@ -41,7 +41,7 @@ function handleSecondTyping(event) {
     let counter = 0;
 
     // Iterate through each character
-    for (i = 0; i < userInput.length; i++){
+    for (let i = 0; i < userInput.length; i++){
         //Check if 
         if (counter % 2 === 0 && userInput[i] !== ' '){
             answer += userInput.charAt(i).toUpperCase();
@@ -57,7 +57,7 @@ function handleSecondTyping(event) {
     document.querySelector('.alternating-capital').innerText = answer;
 }
 
-function handleThirdTyping(event) {
+function handleReverseInput(event) {
     // Grab user input
     let userInput = event.target.value;
 
@@ -73,10 +73,10 @@ function handleThirdTyping(event) {
         i--;
     }
 
-    document.querySelector('.reverse-input').innerText = answer;
+    document.querySelector('.reverse-output').innerText = answer;
 }
 
-function handleFourthTyping(event) {
+function handleEmojiInput(event) {
     // Grab user input
     let userInput = event.target.value;
 
@@ -101,5 +101,5 @@ function handleFourthTyping(event) {
         i++;
     }
 
-    document.querySelector('.emoji-input').innerText = answer;
+    document.querySelector('.emoji-output').innerText = answer;
 }
